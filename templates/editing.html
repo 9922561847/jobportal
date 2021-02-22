@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+
+</head>
+
+<body>
+<div style="background-image:{% static 'C:\Users\Pratiksha\djangoProjects\jobportal\static\download.jpg'%}">
+ <form method="post">
+        {% csrf_token %}
+        <input type="text" value="{{x.name}}" name="name"/><br>
+        <input type="number" value="{{x.mobile}}" name="mobile"/><br>
+        <input type="password" value="{{x.password}}" name="pass"/><br>
+        <input type="email" value="{{x.email}}" name="mail"/><br>
+     <input type="file" value="{{x.file}}" name="cv"><br>
+        <input type="submit" value="edit">
+    </form>
+<br><br>
+</div>
+</body>
+</html>
